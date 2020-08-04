@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+  <alphabet></alphabet>
+  <sdefs>
+    <sdef n="n"               c="Noun"/>
+  </sdefs>
+
+   <section id="main" type="standard">
+      <e><p><l>etl<s n="n"/></l><r>itl<s n="n"/></r></p></e>
+      <e><p><l>tipoztli<s n="n"/></l><r>tipoztl<s n="n"/></r></p></e>
+
+      <e><re>[.\?;:!…¿¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
+      <e><re>,</re>          <p><l><s n="cm"/></l>  <r><s n="cm"/></r></p></e>
+   </section>
+</dictionary>
+
