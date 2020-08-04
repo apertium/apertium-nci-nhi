@@ -3,11 +3,13 @@
   <alphabet></alphabet>
   <sdefs>
     <sdef n="n"               c="Noun"/>
+    <sdef n="sent"            c="Sentence marker"/>
+    <sdef n="cm"              c="Comma"/>
   </sdefs>
 
    <section id="main" type="standard">
-      <e><p><l>etl<s n="n"/></l><r>itl<s n="n"/></r></p></e>
-      <e><p><l>tipoztli<s n="n"/></l><r>tipoztl<s n="n"/></r></p></e>
+      <e><p><l>itl<s n="n"/></l><r>etl<s n="n"/></r></p></e>
+      <e><p><l>tipoztl<s n="n"/></l><r>tipoztli<s n="n"/></r></p></e>
 
       <e><re>[.\?;:!…¿¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
       <e><re>,</re>          <p><l><s n="cm"/></l>  <r><s n="cm"/></r></p></e>
