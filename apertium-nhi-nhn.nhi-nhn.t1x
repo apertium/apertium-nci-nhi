@@ -10,36 +10,44 @@
   </section-def-cats>
 
   <section-def-attrs>
+    <def-attr n="a_poss">
+      <attr-item tags="px1sg"/>
+      <attr-item tags="px2sg"/>
+      <attr-item tags="px3sg"/>
+      <attr-item tags="px1pl"/>
+      <attr-item tags="px2pl"/>
+      <attr-item tags="px3pl"/>
+    </def-attr>
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
     </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
-    <def-var n="number"/>
+    <def-var n="poss"/>
   </section-def-vars>
 
   <section-def-macros>
-    <def-macro n="test" npar="1">
-          <let>
-            <var n="number"/>
-            <lit v=""/>
-          </let>
+    <def-macro n="f_poss1" npar="1">
+          <let> <var n="poss"/><clip pos="1" side="tl" part="a_poss"/></let>
+          <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
     </def-macro>
   </section-def-macros>
 
   <section-rules>
-    <rule comment="REGLA: SENT">
+    <rule comment="REGLA: nom">
       <pattern>
-        <pattern-item n="sent"/>
+        <pattern-item n="nom"/>
       </pattern>
       <action>
+         <call-macro n="f_poss1"><with-param pos="1"/></call-macro>
         <out>
-          <chunk name="sent" case="caseFirstWord">
+          <chunk name="n" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SENT"/></tag>
+              <tag><lit-tag v="SN"/></tag>
             </tags>
             <lu>
+              <var n="poss"/>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
           </chunk>
