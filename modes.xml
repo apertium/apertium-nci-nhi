@@ -1,98 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <modes>
 
-  <!-- nhi → nhn -->
+  <!-- nci → nhi -->
 
-  <mode name="nhi-nhn" install="yes" gendebug="yes">
+  <mode name="nci-nhi" install="yes" gendebug="yes">
     <pipeline>
       <program name="hfst-proc -w">
-        <file name="nhi-nhn.automorf.hfst"/>
+        <file name="nci-nhi.automorf.hfst"/>
       </program>
 
 
       <program name="cg-proc -w">
-        <file name="nhi-nhn.rlx.bin"/>
+        <file name="nci-nhi.rlx.bin"/>
       </program>
       <program name="apertium-tagger -u 2 -g $2">
-        <file name="nhi-nhn.prob"/>
+        <file name="nci-nhi.prob"/>
       </program>
       <program name="lsx-proc">
-        <file name="nhi-nhn.autoseq.bin"/>
+        <file name="nci-nhi.autoseq.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
-        <file name="nhi-nhn.autobil.bin"/>
+        <file name="nci-nhi.autobil.bin"/>
       </program>
       <program name="lrx-proc -m">
-        <file name="nhi-nhn.autolex.bin"/>
+        <file name="nci-nhi.autolex.bin"/>
       </program>
 
       <program name="apertium-transfer -b">
-        <file name="apertium-nhi-nhn.nhi-nhn.t1x"/>
-        <file name="nhi-nhn.t1x.bin"/>
+        <file name="apertium-nci-nhi.nci-nhi.t1x"/>
+        <file name="nci-nhi.t1x.bin"/>
       </program>
       <program name="apertium-interchunk">
-        <file name="apertium-nhi-nhn.nhi-nhn.t2x"/>
-        <file name="nhi-nhn.t2x.bin"/>
+        <file name="apertium-nci-nhi.nci-nhi.t2x"/>
+        <file name="nci-nhi.t2x.bin"/>
       </program>
       <program name="apertium-postchunk">
-        <file name="apertium-nhi-nhn.nhi-nhn.t3x"/>
-        <file name="nhi-nhn.t3x.bin"/>
+        <file name="apertium-nci-nhi.nci-nhi.t3x"/>
+        <file name="nci-nhi.t3x.bin"/>
       </program>
       <program name="lsx-proc" debug-suff="revautoseq">
-        <file name="nhi-nhn.revautoseq.bin"/>
+        <file name="nci-nhi.revautoseq.bin"/>
       </program>
       <program name="hfst-proc $1">
-        <file name="nhi-nhn.autogen.hfst"/>
+        <file name="nci-nhi.autogen.hfst"/>
       </program>
 
     </pipeline>
   </mode>
 
-  <!-- nhn → nhi -->
+  <!-- nhi → nci -->
 
-  <mode name="nhn-nhi" install="yes" gendebug="yes">
+  <mode name="nhi-nci" install="yes" gendebug="yes">
     <pipeline>
       <program name="hfst-proc -w">
-        <file name="nhn-nhi.automorf.hfst"/>
+        <file name="nhi-nci.automorf.hfst"/>
       </program>
 
 
       <program name="cg-proc -w">
-        <file name="nhn-nhi.rlx.bin"/>
+        <file name="nhi-nci.rlx.bin"/>
       </program>
       <program name="apertium-tagger -u 2 -g $2">
-        <file name="nhn-nhi.prob"/>
+        <file name="nhi-nci.prob"/>
       </program>
 
       <program name="lsx-proc">
-        <file name="nhn-nhi.autoseq.bin"/>
+        <file name="nhi-nci.autoseq.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
-        <file name="nhn-nhi.autobil.bin"/>
+        <file name="nhi-nci.autobil.bin"/>
       </program>
       <program name="lrx-proc -m">
-        <file name="nhn-nhi.autolex.bin"/>
+        <file name="nhi-nci.autolex.bin"/>
       </program>
 
       <program name="apertium-transfer -b">
-        <file name="apertium-nhi-nhn.nhn-nhi.t1x"/>
-        <file name="nhn-nhi.t1x.bin"/>
+        <file name="apertium-nci-nhi.nhi-nci.t1x"/>
+        <file name="nhi-nci.t1x.bin"/>
       </program>
       <program name="apertium-interchunk">
-        <file name="apertium-nhi-nhn.nhn-nhi.t2x"/>
-        <file name="nhn-nhi.t2x.bin"/>
+        <file name="apertium-nci-nhi.nhi-nci.t2x"/>
+        <file name="nhi-nci.t2x.bin"/>
       </program>
       <program name="apertium-postchunk">
-        <file name="apertium-nhi-nhn.nhn-nhi.t3x"/>
-        <file name="nhn-nhi.t3x.bin"/>
+        <file name="apertium-nci-nhi.nhi-nci.t3x"/>
+        <file name="nhi-nci.t3x.bin"/>
       </program>
       <program name="lsx-proc" debug-suff="revautoseq">
-        <file name="nhn-nhi.revautoseq.bin"/>
+        <file name="nhi-nci.revautoseq.bin"/>
       </program>
       <program name="hfst-proc $1">
-        <file name="nhn-nhi.autogen.hfst"/>
+        <file name="nhi-nci.autogen.hfst"/>
       </program>
 
     </pipeline>

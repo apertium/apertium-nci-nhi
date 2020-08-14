@@ -1,6 +1,6 @@
 AC_PREREQ(2.52)
 
-AC_INIT([Apertium nhi-nhn], [0.1.0], [ftyers@prompsit.com], [apertium-nhi-nhn], [http://wiki.apertium.org/wiki/Apertium-nhi-nhn])
+AC_INIT([Apertium nci-nhi], [0.1.0], [ftyers@prompsit.com], [apertium-nci-nhi], [http://wiki.apertium.org/wiki/Apertium-nci-nhi])
 AM_INIT_AUTOMAKE
 AC_PROG_AWK
 
@@ -22,8 +22,8 @@ AS_IF([test x$ZCAT = xfalse], [AC_MSG_ERROR([You don't have zcat nor gzcat insta
 
 m4_ifdef([AP_CHECK_LING],[],[AC_MSG_ERROR([AP_CHECK_LING not defined, is apertium.m4 in ACLOCAL_PATH? See: http://wiki.apertium.org/wiki/Installation_troubleshooting])])
 
-AP_CHECK_LING([1], [apertium-nhi])
-AP_CHECK_LING([2], [apertium-nhn])
+AP_CHECK_LING([1], [apertium-nci])
+AP_CHECK_LING([2], [apertium-nhi])
 
 AP_MKINCLUDE
 

@@ -1,9 +1,9 @@
 ###############################################################################
-## Makefile for nhi--nhn
+## Makefile for nci--nhi
 ###############################################################################
 
-LANG1=nhi
-LANG2=nhn
+LANG1=nci
+LANG2=nhi
 PREFIX1=$(LANG1)-$(LANG2)
 PREFIX2=$(LANG2)-$(LANG1)
 
@@ -41,7 +41,7 @@ TARGETS_COMMON =		\
 ###############################################################################
 
 # -------------------
-# nhi analysis:
+# nci analysis:
 # -------------------
 
 .deps/$(PREFIX1).autobil.prefixes: $(PREFIX1).autobil.bin .deps/.d
@@ -69,7 +69,7 @@ $(PREFIX1).automorf.hfst: .deps/$(LANG1).automorf.hfst .deps/$(PREFIX1).autobil.
 
 
 # -------------------
-# nhi generation:
+# nci generation:
 # ---------------------
 
 $(PREFIX2).autogen.hfst: $(AP_SRC1)/$(LANG1).autogen.hfst
@@ -79,7 +79,7 @@ $(PREFIX2).autogen.bin: $(AP_SRC1)/$(LANG1).autogen.bin
 	cp $< $@
 
 # -------------------
-# nhn analysis:
+# nhi analysis:
 # -------------------
 
 .deps/$(PREFIX2).autobil.prefixes: $(PREFIX2).autobil.bin .deps/.d
@@ -106,7 +106,7 @@ $(PREFIX2).automorf.hfst: .deps/$(LANG2).automorf.hfst .deps/$(PREFIX2).autobil.
 	hfst-compose-intersect -1 .deps/$(LANG2).automorf.hfst -2 .deps/$(PREFIX2).autobil.prefixes | hfst-fst2fst -w -o $@
 
 # -------------------
-# nhn generation:
+# nhi generation:
 # ---------------------
 
 $(PREFIX1).autogen.hfst: $(AP_SRC2)/$(LANG2).autogen.hfst
@@ -231,10 +231,10 @@ EXTRA_DIST=					\
 ## Installation
 ###############################################################################
 
-apertium_nhi_nhndir=$(prefix)/share/apertium/$(BASENAME)/
+apertium_nci_nhidir=$(prefix)/share/apertium/$(BASENAME)/
 
 # Files which should be installed to $(prefix)/share/apertium/$(BASENAME)/:
-apertium_nhi_nhn_DATA=	\
+apertium_nci_nhi_DATA=	\
 	$(TARGETS_COMMON)				\
 	$(BASENAME).$(PREFIX1).t1x			\
 	$(BASENAME).$(PREFIX1).t2x			\
@@ -264,10 +264,10 @@ clean-local:
 ###############################################################################
 
 test: all
-	echo "house" | apertium -d . nhi-nhn | tee .test-mt
+	echo "house" | apertium -d . nci-nhi | tee .test-mt
 	@echo "house" > .test-ref
 	@diff .test-ref .test-mt
-	echo "house" | apertium -d . nhn-nhi | tee .test-mt
+	echo "house" | apertium -d . nhi-nci | tee .test-mt
 	@echo "house" > .test-ref
 	@diff .test-ref .test-mt
 	@rm .test-ref .test-mt
