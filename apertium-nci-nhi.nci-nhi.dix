@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+  <alphabet></alphabet>
+  <sdefs>
+    <sdef n="n"               c="Noun"/>
+    <sdef n="px1sg"           c="1st person possessive"/>
+    <sdef n="px2sg"           c="2nd person possessive"/>
+    <sdef n="px3sg"           c="3rd person possessive"/>
+    <sdef n="px1pl"           c="1st person possessive"/>
+    <sdef n="px2pl"           c="2nd person possessive"/>
+    <sdef n="px3pl"           c="3rd person possessive"/>
+    <sdef n="sent"            c="Sentence marker"/>
+    <sdef n="cm"              c="Comma"/>
+  </sdefs>
+  <pardefs>
+    <pardef n="N">
+      <e><i><s n="px1sg"/></i></e>
+      <e><i><s n="px2sg"/></i></e>
+      <e><i><s n="px3sg"/></i></e>
+      <e><i><s n="px1pl"/></i></e>
+      <e><i><s n="px2pl"/></i></e>
+      <e><i><s n="px3pl"/></i></e>
+      <e><i></i></e>
+    </pardef>
+  </pardefs>
+  <section id="main" type="standard">
+      <e><par n="N"/><p><l>itl<s n="n"/></l><r>etl<s n="n"/></r></p></e>
+      <e><par n="N"/><p><l>tipoztl<s n="n"/></l><r>tipoztli<s n="n"/></r></p></e>
+
+      <e><re>[.\?;:!…¿¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
+      <e><re>,</re>          <p><l><s n="cm"/></l>  <r><s n="cm"/></r></p></e>
+   </section>
+</dictionary>
+
