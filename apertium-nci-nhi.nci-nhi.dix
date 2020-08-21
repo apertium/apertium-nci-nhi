@@ -3,6 +3,10 @@
   <alphabet></alphabet>
   <sdefs>
     <sdef n="n"               c="Noun"/>
+    <sdef n="v"               c="Verbs"/>
+
+    <sdef n="iv"              c="Intransitive"/>
+
     <sdef n="px1sg"           c="1st person possessive"/>
     <sdef n="px2sg"           c="2nd person possessive"/>
     <sdef n="px3sg"           c="3rd person possessive"/>
@@ -11,6 +15,12 @@
     <sdef n="px3pl"           c="3rd person possessive"/>
     <sdef n="sent"            c="Sentence marker"/>
     <sdef n="cm"              c="Comma"/>
+    <sdef n="s_sg1"           c="Subject 1st singular"/>
+    <sdef n="s_sg2"           c="Subject 2nd singular"/>
+    <sdef n="s_sg3"           c="Subject 3rd singular"/>
+    <sdef n="s_pl1"           c="Subject 1st plural"/>
+    <sdef n="s_pl2"           c="Subject 2nd plural"/>
+    <sdef n="s_pl3"           c="Subject 3rd plural"/>
   </sdefs>
   <pardefs>
     <pardef n="N">
@@ -22,11 +32,25 @@
       <e><i><s n="px3pl"/></i></e>
       <e><i></i></e>
     </pardef>
+    <pardef n="V1">
+      <e><i><s n="s_sg1"/></i></e>
+      <e><i><s n="s_sg2"/></i></e>
+      <e><i><s n="s_sg3"/></i></e>
+      <e><i><s n="s_pl1"/></i></e>
+      <e><i><s n="s_pl2"/></i></e>
+      <e><i><s n="s_pl3"/></i></e>
+      <e><i></i></e>
+    </pardef>
   </pardefs>
   <section id="main" type="standard">
+      <!-- SECTION: Nouns -->
       <e><par n="N"/><p><l>tlācatl<s n="n"/></l><r>tlacatl<s n="n"/></r></p></e>
       <e><par n="N"/><p><l>altepetl<s n="n"/></l><r>altepetl<s n="n"/></r></p></e>
       <e><par n="N"/><p><l>ātl<s n="n"/></l><r>atl<s n="n"/></r></p></e>
+
+      <!-- SECTION: Verbs -->
+      <e><par n="V1"/><p><l>cochi<s n="v"/><s n="iv"/></l><r>cochi<s n="v"/><s n="iv"/></r></p></e>
+<!--      <e><par n="V3"/><p><l>maca<s n="v"/><s n="dv"/></l><r>maca<s n="v"/><s n="dv"/></r></p></e>-->
 
       <e><re>[.\?;:!…¿¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
       <e><re>,</re>          <p><l><s n="cm"/></l>  <r><s n="cm"/></r></p></e>
