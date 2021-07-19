@@ -1,0 +1,10 @@
+{
+    "nci-nhi": {
+        "input": "nci-nhi-input.txt",
+        "mode": "nci-nhi"
+    },
+    "nhi-nci": {
+        "input": "nhi-nci-input.txt",
+        "mode": "nhi-nci"
+    }
+}
